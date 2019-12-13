@@ -10,3 +10,5 @@ public class Practice {
 		System.out.println(s2);
 	}
 }
+
+
