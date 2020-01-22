@@ -1,4 +1,4 @@
-package Level3.섬연결하기;
+package Level3.섬연결하기.prim;
 
 import java.util.Collections;
 import java.util.Comparator;
