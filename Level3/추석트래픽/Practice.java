@@ -46,6 +46,7 @@ public class Practice {
 //		System.out.println(calendar2.compareTo(calendar));
 		System.out.println(sdf2.format(calendar2.getTime()).toString());
 //		System.out.println(sdf2.format(calendar.getTime()).compareTo(sdf2.format(calendar2.getTime())));	
+		
 	}
 }
 
