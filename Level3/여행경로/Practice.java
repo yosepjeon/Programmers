@@ -7,28 +7,19 @@ import java.util.PriorityQueue;
 
 public class Practice {
 	public static void main(String[] args ) {
-//		PriorityQueue<String> pq = new PriorityQueue<>(new Comparator<String>() {
-//
-//			@Override
-//			public int compare(String o1, String o2) {
-//				// TODO Auto-generated method stub
-//				return o1.compareTo(o2);
-//			}
-//		});
-//		
-//		pq.add("ATL");
-//		pq.add("SFO");
-//		pq.add("TTT");
-//		
-//		while(!pq.isEmpty()) {
-//			System.out.println(pq.poll());
-//		}
+		StringBuffer sb = checkStringBufferInRecursive(1, new StringBuffer().append("1 "));
+	
+		System.out.println(sb.toString());
+	}
+	
+	public static StringBuffer checkStringBufferInRecursive(int num,StringBuffer sb) {
+		if(num >= 10 )
+			return sb;
 		
-		Map<String, String> map = new HashMap<String, String>();
-		
-		map.put("a", "a");
-		
-		System.out.println(map.get("a"));
-		System.out.println(map.get("b"));
+		if(num % 2 == 0) {
+			return checkStringBufferInRecursive(num+1, sb.append(num+1 + " "));
+		}else {
+			return checkStringBufferInRecursive(num+1, sb.append(num+1 + " "));
+		}
 	}
 }
