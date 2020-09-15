@@ -1,4 +1,4 @@
-package Level3.추석트래픽;
+package Level3.추석트래픽.시도1;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
