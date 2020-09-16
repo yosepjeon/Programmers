@@ -1,3 +1,5 @@
+package Level1.제일작은수제거하기;
+
 import java.util.LinkedList;
 
 class Solution {
