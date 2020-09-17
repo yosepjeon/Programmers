@@ -19,11 +19,10 @@ class Solution {
 		char[] carr = str.toCharArray();
 		
 		answer = new int[carr.length];
-		List<Integer> list = new ArrayList<>();
 		for (int i = carr.length-1; i >= 0; i--) {
 			answer[carr.length-1 - i] = carr[i] - '0';
 		}
-
+		//
 		return answer;
 	}
 }
