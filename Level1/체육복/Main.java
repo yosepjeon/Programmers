@@ -10,7 +10,7 @@ public class Main {
 		Solution solution = new Solution();
 		
 		int n = 5;
-		int[] lost = {1,3,5};
+		int[] lost = {3,5};
 		int[] reserve = {2,4};
 		
 		System.out.println(solution.solution(n, lost, reserve));
@@ -56,7 +56,16 @@ class Solution {
 		int lostSize = lostList.size();
 		for (int i = 0; i < lostSize; i++) {
 			PriorityQueue<LostStudent> pq = new PriorityQueue<>((s1, s2) -> {
-				return s1.reserveCount - s2.reserveCount;
+				if(s1.reserveCount > s2.reserveCount) {
+					return 1;
+				}else if(s1.reserveCount < s1.reserveCount) {
+					return -1;
+				}else {
+//					return 0;
+					return s1.id - s2.id;
+				}
+//				return 1;
+//				return s1.reserveCount - s2.reserveCount;
 			});
 
 			lostItr = lostList.iterator();
