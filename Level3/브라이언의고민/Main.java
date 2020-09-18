@@ -20,6 +20,7 @@ class Solution {
 	public String solution(String sentence) {
 		String answer = "";
 		
+		
 		StringBuffer sb = new StringBuffer();
 		while(sentence.length() != 0) {
 			rule1ResultIndex = -1;
