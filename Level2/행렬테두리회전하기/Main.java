@@ -35,7 +35,7 @@ public class Main {
 
         int[] result = solution.solution(rows, columns, queries);
 
-        for(int i=0;i<result.length;i++) {
+        for (int i = 0; i < result.length; i++) {
             System.out.println(result[i]);
         }
     }
@@ -91,6 +91,14 @@ class Matrix {
             }
         }
 
+
+//        for (int i = 1; i < matrix.length; i++) {
+//            for (int j = 1; j < matrix.length; j++) {
+//                System.out.print(matrix[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+
         for (int i = col1; i < col2; i++) {
             matrix[row1][i+1] = copyMatrix[row1][i];
 
@@ -122,6 +130,15 @@ class Matrix {
                 min = copyMatrix[i][col1];
             }
         }
+
+//        System.out.println();
+//
+//        for (int i = 1; i < matrix.length; i++) {
+//            for (int j = 1; j < matrix[0].length; j++) {
+//                System.out.print(matrix[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
 
         return min;
     }
