@@ -16,7 +16,11 @@ public class Practice {
 				map[i][j] = scr.nextInt();
 			}
 		}
-		
+
+//		3
+//		1 0 2
+//		0 0 0
+//		4 0 3
 		rotate();
 		
 		
@@ -29,18 +33,19 @@ public class Practice {
 	}
 	
 	public static void rotate() {
-		int[][] temp = new int[N][N];
+		int[][] rotatedMap = new int[N][N];
 		
 		for(int i=0;i<N;i++) {
 			for(int j=0;j<N;j++) {
-				temp[i][j] = map[N-1-j][i];
+				rotatedMap[i][j] = map[N-1-j][i];
 			}
 		}
 		
-		for(int i=0;i<N;i++) {
-			for(int j=0;j<N;j++) {
-				map[i][j] = temp[i][j];
-			}
-		}
+//		for(int i=0;i<N;i++) {
+//			for(int j=0;j<N;j++) {
+//				map[i][j] = temp[i][j];
+//			}
+//		}
+		map = rotatedMap;
 	}
 }
