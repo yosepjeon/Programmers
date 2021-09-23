@@ -45,7 +45,9 @@ class Solution {
 
         keyLen = key.length;
         lockLen = lock.length;
-        len = keyLen + (2 * (keyLen - 1));
+//        len = keyLen + (2 * (keyLen - 1)); => 착오
+        len = lockLen + (2 * (lockLen - 1));
+        len = keyLen * 3;
 
         map = new int[len][len];
         int lockZeroCnt = 0;
@@ -59,23 +61,6 @@ class Solution {
                 }
             }
         }
-
-//        for (int i = 0; i < len; i++) {
-//            for (int j = 0; j < len; j++) {
-//                System.out.print(map[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
-//
-//        System.out.println(lockZeroCnt);
-//
-//        System.out.println("key");
-//        for (int i = 0; i < keyLen; i++) {
-//            for (int j = 0; j < keyLen; j++) {
-//                System.out.print(key[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
 
         // 오른쪽 이동
         moveDown:
@@ -95,13 +80,6 @@ class Solution {
             }
         }
 
-//		for (int i = 0; i < len; i++) {
-//			for (int j = 0; j < len; j++) {
-//				System.out.print(map[i][j] + " ");
-//			}
-//			System.out.println();
-//		}
-
         return false;
     }
 
@@ -109,7 +87,6 @@ class Solution {
         for (int i = 0; i < keyLen; i++) {
             for (int j = 0; j < keyLen; j++) {
                 if (map[down + i][right + j] + key[i][j] > 1) {
-//                    System.out.println("#" + (map[down + i][right + j] + key[i][j]));
                     return false;
                 }
 
@@ -119,13 +96,11 @@ class Solution {
                                 map[down + i][right + j] == 0 &&
                                 key[i][j] == 1
                 ) {
-//                    System.out.println(i + "," + j);
                 	lockZeroCnt--;
                 }
             }
         }
 
-//        System.out.println("lockZeroCnt= " + lockZeroCnt);
         return lockZeroCnt == 0 ? true : false;
     }
 
@@ -137,14 +112,6 @@ class Solution {
                 rotatedMap[i][j] = key[keyLen - 1 - j][i];
             }
         }
-
-//        System.out.println("rotated key");
-//        for (int i = 0; i < keyLen; i++) {
-//            for (int j = 0; j < keyLen; j++) {
-//                System.out.print(rotatedMap[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
 
         return rotatedMap;
     }
