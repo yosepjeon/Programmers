@@ -19,7 +19,6 @@ class Solution {
 
     public long solution(String expression) {
         long answer = 0;
-//        System.out.println(expression);
 
         char[] operators = {'+', '-', '*'};
 
@@ -37,8 +36,6 @@ class Solution {
             }
         }
         exp.add(sb.toString());
-//        System.out.println("exp");
-//        System.out.println(exp);
 
         int count = 0;
         boolean[] isVisited = new boolean[3];
@@ -128,8 +125,6 @@ class Solution {
             }
         }
 
-//        System.out.println(operatorsMap);
-//        System.out.println(stack.size());
         while(!stack.isEmpty()) {
             prefixExpression.add(stack.pop());
         }
